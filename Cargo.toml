@@ -3,6 +3,10 @@ name = "testapp"
 version = "0.1.0"
 edition = "2021"
 
+[profile.release]
+lto = "thin"
+strip = true
+
 [dependencies]
 chrono = { version = "0.4.45", features = ["serde"] }
 dioxus = { version = "0.6", features = ["desktop"] }
