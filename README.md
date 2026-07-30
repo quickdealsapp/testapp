@@ -34,6 +34,19 @@ cargo test           # unit tests
 cargo fmt --all --check && cargo clippy --all-targets -- -D warnings
 ```
 
+## Releases
+
+Prebuilt binaries for Linux, macOS (Intel + Apple Silicon) and Windows are attached to every
+[GitHub release](https://github.com/quickdealsapp/testapp/releases). Download the archive for your
+platform, extract it, and run the `testapp` executable (the Linux webview packages above are still
+required at runtime).
+
+Releases are cut by pushing a tag, which runs `.github/workflows/release.yml`:
+
+```bash
+git tag v0.1.0 && git push origin v0.1.0
+```
+
 ## Where notes are stored
 
 All notes live in a single JSON file inside the platform data directory:
